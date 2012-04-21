@@ -1,0 +1,47 @@
+update_interval 1
+double_buffer yes
+alignment top_right
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+own_window_class conky
+# on_bottom yes
+default_color white
+minimum_size 500 350
+# maximum_width 600
+gap_x 0
+gap_y 0
+use_xft yes 
+xftfont DROID Sans:size=8
+xftalpha 0.3
+draw_shades no
+lua_load ~/Soyombo/Soyombo.lua
+lua_draw_hook_pre Soyombo_stats
+
+TEXT
+
+
+
+
+${offset 340}${color slate grey}${time %a, } ${color }${time %e %B %G}
+${offset 340}${color slate grey}Ажилсан цаг: ${color }$uptime
+${offset 340}${color slate grey}Цэнэг: ${color }${battery BAT1}
+${offset 340}${color slate grey}Халалт: ${color }${acpitemp}
+${offset 340}${color slate grey}Процесууд: ${color }$processes  
+${offset 340}${color slate grey}Ажилж байгаа:   ${color }$running_processes
+
+${offset 380}${color slate grey}Өндөр Хурд:
+${offset 380}${color #ddaa00} ${top name 1}${top_mem cpu 1}
+${offset 380}${color lightgrey} ${top name 2}${top cpu 2}
+${offset 380}${color lightgrey} ${top name 3}${top cpu 3}
+${offset 380}${color lightgrey} ${top name 4}${top cpu 4}
+
+${offset 380}${color slate grey}Их Санах ой:
+${offset 380}${color #ddaa00} ${top_mem name 1}${top_mem mem 1}
+${offset 380}${color lightgrey} ${top_mem name 2}${top_mem mem 2}
+${offset 380}${color lightgrey} ${top_mem name 3}${top_mem mem 3}
+${offset 380}${color lightgrey} ${top_mem name 4}${top_mem mem 4}
+
+${offset 380}${color slate grey}Татах: ${color }${downspeed eth0} k/s
+${offset 380}${color slate grey}Түлхэх: ${color }${upspeed eth0} k/s
