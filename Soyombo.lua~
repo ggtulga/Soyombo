@@ -1,7 +1,7 @@
 
 require 'cairo'
 sx = 180       -- X coordinate of the Soyombo
-sy = 25        -- Y coordinate of the Soyombo
+sy = 125        -- Y coordinate of the Soyombo
 s_table = {
 	{	-- Big circle of the Sun
 		name = "time",                  -- Type of status to display.

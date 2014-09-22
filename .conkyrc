@@ -1,8 +1,8 @@
 update_interval 1
 double_buffer yes
 alignment top_right
-own_window yes
-own_window_type override
+own_window true 
+own_window_type desktop
 own_window_transparent yes
 own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
 own_window_class conky
@@ -26,7 +26,7 @@ TEXT
 
 ${offset 340}${color slate grey}${time %a, } ${color }${time %e %B %G}
 ${offset 340}${color slate grey}Ажилсан цаг: ${color }$uptime
-${offset 340}${color slate grey}Цэнэг: ${color }${battery BAT1}
+${offset 340}${color slate grey}Цэнэг: ${color }${battery BAT0}
 ${offset 340}${color slate grey}Халалт: ${color }${acpitemp}
 ${offset 340}${color slate grey}Процесууд: ${color }$processes  
 ${offset 340}${color slate grey}Ажилж байгаа:   ${color }$running_processes
